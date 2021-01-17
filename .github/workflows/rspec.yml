@@ -29,12 +29,6 @@ jobs:
         run: |
           sudo curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
           sudo chmod +x ./cc-test-reporter
-
-      - name: Start Code Climate Reporter
-        run: 
-        env:
-          GIT_BRANCH: ${GITHUB_REF#refs/heads/}
-          GIT_COMMIT_SHA: ${GITHUB_SHA}
       - name: Generate Coverage
         run: |
           ./cc-test-reporter before-build
