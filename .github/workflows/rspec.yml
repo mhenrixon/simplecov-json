@@ -11,13 +11,6 @@ jobs:
           ruby-version: 2.7
           bundler: 2.2.5
           bundler-cache: true
-      # - uses: paambaati/codeclimate-action@v2.7.5
-      #   env:
-      #     COV: true
-      #     CC_TEST_REPORTER_ID: 3a86801713dff2117de9a09cec46a179bbc693b353f299d83c8023ad96b36a21
-      #   with:
-      #     coverageCommand: bin/rspec --require spec_helper --tag ~perf
-      #     debug: true
 
       - name: Install Code Climate reporter
         run: |
