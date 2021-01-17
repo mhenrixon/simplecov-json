@@ -1,9 +1,10 @@
 # frozen_string_literal: true
+
 require 'simplecov_json_formatter'
 
 CI_FORMATTERS = [
   SimpleCov::Formatter::SimpleFormatter,
-  SimpleCov::Formatter::JSONFormatter,
+  SimpleCov::Formatter::JSONFormatter
 ].freeze
 
 LOCAL_FORMATTERS = [
@@ -42,4 +43,3 @@ SimpleCov.start do
 
   track_files '**/*.rb'
 end
-
