@@ -31,23 +31,21 @@ jobs:
           sudo chmod +x ./cc-test-reporter
 
       - name: Start Code Climate Reporter
-        run: ./cc-test-reporter before-build
+        run: 
         env:
           GIT_BRANCH: ${GITHUB_REF#refs/heads/}
           GIT_COMMIT_SHA: ${GITHUB_SHA}
       - name: Generate Coverage
-        run: bin/rspec --require spec_helper --tag ~perf
+        run: |
+          ./cc-test-reporter before-build
+          bin/rspec --require spec_helper --tag ~perf
+          ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
         env:
           COV: true
           GIT_BRANCH: ${GITHUB_REF#refs/heads/}
           GIT_COMMIT_SHA: ${GITHUB_SHA}
-      - name: Upload Coverage
-        run: |
-          ./cc-test-reporter after-build --exit-code 0
-        env:
-          GIT_BRANCH: ${GITHUB_REF#refs/heads/}
-          GIT_COMMIT_SHA: ${GITHUB_SHA}
           CC_TEST_REPORTER_ID: 3a86801713dff2117de9a09cec46a179bbc693b353f299d83c8023ad96b36a21
+
 
   tests:
     services:
