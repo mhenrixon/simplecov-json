@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.24
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
@@ -57,60 +57,62 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1>simplecov-json</h1>
+      <div id="content"><div id='filecontents'><h1 id="simplecov-oj">simplecov-oj</h1>
 
-<p>JSON formatter for the ruby 1.9+ code coverage gem SimpleCov</p>
+<p>JSON formatter for the ruby 2.5+ code coverage gem SimpleCov</p>
 
-<h2>Usage</h2>
+<h2 id="usage">Usage</h2>
 
 <ol>
-<li><p>Add simplecov-json to your <code>Gemfile</code> and <code>bundle install</code>:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>simplecov-json</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:require</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='symbol'>:group</span> <span class='op'>=&gt;</span> <span class='symbol'>:test</span>
-</code></pre></li>
-<li><p>Require simplecov-json and set it up as SimpleCov&#39;s formatter:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>simplecov-json</span><span class='tstring_end'>&#39;</span></span>
-<span class='const'><span class='object_link'><a href="SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span><span class='period'>.</span><span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SimpleCov/Formatter.html" title="SimpleCov::Formatter (module)">Formatter</a></span></span><span class='op'>::</span><span class='const'>JSONFormatter</span>
-</code></pre></li>
+<li>Add simplecov-oj to your <code>Gemfile</code> and <code>bundle install</code>:</li>
 </ol>
 
-<h2>Result</h2>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>simplecov-oj</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>require:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>group:</span> <span class='symbol'>:test</span>
+</code></pre>
+
+<ol>
+<li>Require simplecov-oj and set it up as SimpleCov&#39;s formatter:</li>
+</ol>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>simplecov-oj</span><span class='tstring_end'>&#39;</span></span>
+<span class='const'><span class='object_link'><a href="SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span><span class='period'>.</span><span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SimpleCov/Formatter.html" title="SimpleCov::Formatter (module)">Formatter</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SimpleCov/Formatter/OjFormatter.html" title="SimpleCov::Formatter::OjFormatter (class)">OjFormatter</a></span></span>
+</code></pre>
+
+<h2 id="result">Result</h2>
 
 <p>Generated JSON can be found in coverage/coverage.json</p>
 
 <p>The format you can expect is:</p>
 
 <pre class="code json"><code class="json">{
-    &quot;timestamp&quot;: 1348489587,
-    &quot;command_name&quot;: &quot;RSpec&quot;,
-    &quot;files&quot;: [
-        {
-            &quot;filename&quot;: &quot;/home/user/rails/environment.rb&quot;,
-            &quot;covered_percent&quot;: 50.0,
-            &quot;coverage&quot;: [
-                null,
-                1,
-                null,
-                null,
-                1
-            ],
-            &quot;covered_strength&quot;: 0.50,
-            &quot;covered_lines&quot;: 2,
-            &quot;lines_of_code&quot;: 4
-        },
-        ...
-    ],
-    &quot;metrics&quot;: {
-          &quot;covered_percent&quot;: 81.70731707317073,
-          &quot;covered_strength&quot;: 0.8170731707317073,
-          &quot;covered_lines&quot;: 67,
-          &quot;total_lines&quot;: 82
-    }
+  &quot;timestamp&quot;: 1348489587,
+  &quot;command_name&quot;: &quot;RSpec&quot;,
+  &quot;files&quot;: [
+    {
+      &quot;filename&quot;: &quot;/home/user/rails/environment.rb&quot;,
+      &quot;covered_percent&quot;: 50.0,
+      &quot;coverage&quot;: [
+        null,
+        1,
+        null,
+        null,
+        1
+      ],
+      &quot;covered_strength&quot;: 0.50,
+      &quot;covered_lines&quot;: 2,
+      &quot;lines_of_code&quot;: 4
+    },
+  ],
+  &quot;metrics&quot;: {
+    &quot;covered_percent&quot;: 81.70731707317073,
+    &quot;covered_strength&quot;: 0.8170731707317073,
+    &quot;covered_lines&quot;: 67,
+    &quot;total_lines&quot;: 82
+  }
 }
 </code></pre>
 
-<h2>Making Contributions</h2>
+<h2 id="making-contributions">Making Contributions</h2>
 
 <p>If you want to contribute, please:</p>
 
@@ -122,15 +124,15 @@
 <li>Check that travis build passes for your pull request.</li>
 </ul>
 
-<h2>Copyright</h2>
+<h2 id="copyright">Copyright</h2>
 
-<p>Copyright (c) 2013 Mikael Llongo. See LICENSE for details.</p>
+<p>Copyright (c) 2020 Mikael Henriksson. See LICENSE for details.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Jan 29 14:46:26 2020 by
+  Generated on Sun Jan 17 11:40:01 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.24 (ruby-2.6.5).
+  0.9.26 (ruby-2.7.2).
 </div>
 
     </div>
