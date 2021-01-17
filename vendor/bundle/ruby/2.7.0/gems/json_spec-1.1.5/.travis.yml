@@ -1,0 +1,17 @@
+branches:
+  only:
+    - master
+gemfile:
+  - gemfiles/rspec2.gemfile
+  - gemfiles/rspec3.gemfile
+language: ruby
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: "2.0"
+rvm:
+  - "2.0"
+  - "2.1"
+  - "2.2"
+  - "2.3.4"
+  - ruby-head
