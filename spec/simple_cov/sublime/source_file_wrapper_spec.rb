@@ -14,9 +14,8 @@ RSpec.describe SimpleCov::Sublime::SourceFileWrapper do
 
     let(:expected_hash) do
       {
-        filename: '/lib/source_file.rb',
         covered_percent: 50.0,
-        coverage: [1, nil, 0, 0, nil, 1, nil],
+        lines: [1, nil, 0, 0, nil, 1, nil],
         covered_strength: 0.50,
         covered_lines: 2,
         lines_of_code: 4

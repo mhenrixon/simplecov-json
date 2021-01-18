@@ -9,6 +9,6 @@ module SimpleCov
   module Sublime
     #
     # @return [String] the current version of the gem
-    VERSION = '0.21.0'
+    VERSION = '0.21.1'
   end
 end
