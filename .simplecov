@@ -9,6 +9,7 @@ CI_FORMATTERS = [
 
 LOCAL_FORMATTERS = [
   SimpleCov::Formatter::SimpleFormatter,
+  SimpleCov::Formatter::JSONFormatter,
   SimpleCov::Formatter::HTMLFormatter
 ].freeze
 

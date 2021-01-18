@@ -19,20 +19,22 @@ RSpec.describe SimpleCov::Formatter::SublimeFormatter do
       {
         'timestamp' => created_at.to_i,
         'command_name' => 'RSpec',
-        'files' => [
-          { 'filename' => '/lib/foo.rb',
+        'coverage' => {
+          '/lib/foo.rb' => {
             'covered_percent' => 50.0,
-            'coverage' => [1, nil, 0, 0, nil, 1, nil],
+            'lines' => [1, nil, 0, 0, nil, 1, nil],
             'covered_strength' => 0.50,
             'covered_lines' => 2,
-            'lines_of_code' => 4 },
-          { 'filename' => '/lib/bar.rb',
+            'lines_of_code' => 4
+          },
+          '/lib/bar.rb' => {
             'covered_percent' => 71.42,
-            'coverage' => [nil, 1, nil, 1, 1, 1, 0, 0, nil, 1, nil],
+            'lines' => [nil, 1, nil, 1, 1, 1, 0, 0, nil, 1, nil],
             'covered_strength' => 0.71,
             'covered_lines' => 5,
-            'lines_of_code' => 7 }
-        ],
+            'lines_of_code' => 7
+          }
+        },
         'metrics' => {
           'covered_percent' => 73.33,
           'covered_strength' => 0.87,

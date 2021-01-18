@@ -12,8 +12,8 @@ RSpec.describe SimpleCov::Sublime::ResultToHash do
   let(:bar_line_list)     { instance_double(Array) }
   let(:bar_coverage_data) { [nil, 1, nil, 1, 1, 1, 0, 0, nil, 1, nil] }
 
-  describe '#source_file_collection' do
-    subject(:source_file_collection) { described_object.send(:source_file_collection) }
+  describe '#extract_files' do
+    subject(:extract_files) { described_object.send(:extract_files) }
 
     before do
       allow(result).to receive(:created_at).and_return(created_at)
@@ -54,7 +54,7 @@ RSpec.describe SimpleCov::Sublime::ResultToHash do
 
     context 'when result.file_names is missing entry for file' do
       it 'excludes the missing file' do
-        expect(source_file_collection.size).to eq(1)
+        expect(extract_files.keys).to match_array(%w[/lib/foo.rb])
       end
     end
   end

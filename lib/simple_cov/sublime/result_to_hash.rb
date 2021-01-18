@@ -18,7 +18,7 @@ module SimpleCov
         @data = {
           timestamp: result.created_at.to_i,
           command_name: result.command_name,
-          files: []
+          coverage: {}
         }
       end
 
@@ -40,16 +40,12 @@ module SimpleCov
 
       # @private
       def extract_files
-        data[:files] = source_file_collection
-      end
-
-      # @private
-      def source_file_collection
-        result.files.each_with_object([]) do |source_file, memo|
+        result.files.each do |source_file|
           next unless result.filenames.include?(source_file.filename)
 
-          memo << SourceFileWrapper.new(source_file).to_h
+          data[:coverage][source_file.filename] = SourceFileWrapper.new(source_file).to_h
         end
+        data[:coverage]
       end
 
       # @private

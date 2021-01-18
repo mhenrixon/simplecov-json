@@ -25,12 +25,13 @@ module SimpleCov
       # @return [Hash]
       #
       def to_h
-        { filename: filename,
+        {
           covered_percent: covered_percent,
-          coverage: coverage_data,
+          lines: lines,
           covered_strength: covered_strength,
           covered_lines: covered_lines_count,
-          lines_of_code: lines_of_code }
+          lines_of_code: lines_of_code
+        }
       end
 
       private
@@ -38,7 +39,7 @@ module SimpleCov
       attr_reader :source_file
 
       # @private
-      def coverage_data
+      def lines
         return coverage if coverage.is_a?(Array)
 
         coverage.transform_keys(&:to_sym)[:lines]
@@ -66,6 +67,31 @@ module SimpleCov
       # @private
       def covered_percent
         source_file.covered_percent
+      end
+
+      # @private
+      def branches
+        source_file.branches
+      end
+
+      # @private
+      def branches_coverage_percent
+        source_file.branches_coverage_percent
+      end
+
+      # @private
+      def covered_branches
+        source_file.covered_branches
+      end
+
+      # @private
+      def missed_branches
+        source_file.missed_branches
+      end
+
+      # @private
+      def total_branches
+        source_file.total_branches
       end
 
       # @private
