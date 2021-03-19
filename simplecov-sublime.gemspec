@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
       file.match(%r{^(lib/*|README|LICENSE|CHANGELOG)})
     end
   end
-  spec.test_files    = ['**/spec/*.rb']
+  spec.test_files    = []
   spec.require_paths = ['lib']
 
   spec.required_ruby_version = '>= 2.5'
