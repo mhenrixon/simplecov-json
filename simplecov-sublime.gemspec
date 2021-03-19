@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = ['spec/spec_helper.rb', 'spec/simple_cov/formatter/oj_formatter_spec.rb']
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '~> 2.5'
+  spec.required_ruby_version = '>= 2.5'
 
   spec.add_dependency 'json'
   spec.add_dependency 'simplecov', '~> 0.14', '< 1.0.0'

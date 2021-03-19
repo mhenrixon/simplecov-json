@@ -27,8 +27,7 @@ jobs:
           echo $GIT_COMMIT_SHA
           ./cc-test-reporter before-build
           bin/rspec --require spec_helper --tag ~perf
-          ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $? --debug
-
+          ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
 
   tests:
     runs-on: ubuntu-latest
