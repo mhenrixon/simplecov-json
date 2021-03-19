@@ -1,12 +1,47 @@
 # Changelog
 
-## [v0.18.0](https://github.com/mhenrixon/simplecov-oj/tree/v0.18.0) (2020-01-29)
+## [v0.21.2](https://github.com/mhenrixon/simplecov-sublime/tree/v0.21.2) (2021-03-19)
 
-[Full Changelog](https://github.com/mhenrixon/simplecov-oj/compare/v0.2...v0.18.0)
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/v0.21.1...v0.21.2)
 
-## [v0.2](https://github.com/mhenrixon/simplecov-oj/tree/v0.2) (2013-07-20)
+## [v0.21.1](https://github.com/mhenrixon/simplecov-sublime/tree/v0.21.1) (2021-01-18)
 
-[Full Changelog](https://github.com/mhenrixon/simplecov-oj/compare/aa3f4993ad39ba63229938d23ac2470b6f2cee3e...v0.2)
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/v0.21.0...v0.21.1)
+
+**Implemented enhancements:**
+
+- Normalize json [\#4](https://github.com/mhenrixon/simplecov-sublime/pull/4) ([mhenrixon](https://github.com/mhenrixon))
+- Test coverage [\#3](https://github.com/mhenrixon/simplecov-sublime/pull/3) ([mhenrixon](https://github.com/mhenrixon))
+- Test coverage [\#2](https://github.com/mhenrixon/simplecov-sublime/pull/2) ([mhenrixon](https://github.com/mhenrixon))
+- Rename gem to simplecov-sublime [\#1](https://github.com/mhenrixon/simplecov-sublime/pull/1) ([mhenrixon](https://github.com/mhenrixon))
+
+## [v0.21.0](https://github.com/mhenrixon/simplecov-sublime/tree/v0.21.0) (2021-01-17)
+
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/v0.19.0...v0.21.0)
+
+## [v0.19.0](https://github.com/mhenrixon/simplecov-sublime/tree/v0.19.0) (2020-11-27)
+
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/v0.18.4...v0.19.0)
+
+## [v0.18.4](https://github.com/mhenrixon/simplecov-sublime/tree/v0.18.4) (2020-02-14)
+
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/v0.18.3...v0.18.4)
+
+## [v0.18.3](https://github.com/mhenrixon/simplecov-sublime/tree/v0.18.3) (2020-02-06)
+
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/v0.18.2...v0.18.3)
+
+## [v0.18.2](https://github.com/mhenrixon/simplecov-sublime/tree/v0.18.2) (2020-02-02)
+
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/v0.18.0...v0.18.2)
+
+## [v0.18.0](https://github.com/mhenrixon/simplecov-sublime/tree/v0.18.0) (2020-01-29)
+
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/v0.2...v0.18.0)
+
+## [v0.2](https://github.com/mhenrixon/simplecov-sublime/tree/v0.2) (2013-07-20)
+
+[Full Changelog](https://github.com/mhenrixon/simplecov-sublime/compare/aa3f4993ad39ba63229938d23ac2470b6f2cee3e...v0.2)
 
 
 
