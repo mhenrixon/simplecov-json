@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: SimpleCov::Oj::ResultWrapper
+  Class: SimpleCov::Sublime::ResultToHash
   
     &mdash; Documentation by YARD 0.9.26
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "SimpleCov::Oj::ResultWrapper";
+  pathId = "SimpleCov::Sublime::ResultToHash";
   relpath = '../../';
 </script>
 
@@ -37,9 +37,9 @@
         <div id="menu">
   
     <a href="../../_index.html">Index (R)</a> &raquo;
-    <span class='title'><span class='object_link'><a href="../../SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Oj.html" title="SimpleCov::Oj (module)">Oj</a></span></span>
+    <span class='title'><span class='object_link'><a href="../../SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Sublime.html" title="SimpleCov::Sublime (module)">Sublime</a></span></span>
      &raquo; 
-    <span class="title">ResultWrapper</span>
+    <span class="title">ResultToHash</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: SimpleCov::Oj::ResultWrapper
+      <div id="content"><h1>Class: SimpleCov::Sublime::ResultToHash
   
   
   
@@ -74,7 +74,7 @@
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next">SimpleCov::Oj::ResultWrapper</li>
+            <li class="next">SimpleCov::Sublime::ResultToHash</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -94,15 +94,14 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/simple_cov/oj/result_wrapper.rb</dd>
+    <dd>lib/simple_cov/sublime/result_to_hash.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Representation of the simplecov result including it&#39;s coverage data, source code,
-source lines and featuring helpers to interpret that data.</p>
+    <p>Massage result into a hash that can be dumped to json by OJ</p>
 
 
   </div>
@@ -118,7 +117,7 @@ source lines and featuring helpers to interpret that data.</p>
       
       
         
-        <div class='inline'><p>Mikael Henriksson <a href="mailto:mikael@mhenrixon.com">mikael@mhenrixon.com</a></p>
+        <div class='inline'><p>Mikael Henriksson <a href="mailto:mikael@mhenrixon.se">mikael@mhenrixon.se</a></p>
 </div>
       
     </li>
@@ -143,7 +142,7 @@ source lines and featuring helpers to interpret that data.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(result)  &#x21d2; ResultWrapper </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(result)  &#x21d2; ResultToHash </a>
     
 
     
@@ -159,7 +158,7 @@ source lines and featuring helpers to interpret that data.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Wrap the SimpleCov::Result to enable hash conversion without monkey patching.</p>
+    <span class="summary_desc"><div class='inline'><p>Initialize a new ResultToHash.</p>
 </div></span>
   
 </li>
@@ -182,7 +181,7 @@ source lines and featuring helpers to interpret that data.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a nicely formatted hash from the simplecov result data.</p>
+    <span class="summary_desc"><div class='inline'><p>Create a hash from the result that can be used for JSON dumping.</p>
 </div></span>
   
 </li>
@@ -197,7 +196,7 @@ source lines and featuring helpers to interpret that data.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(result)  &#x21d2; <tt><span class='object_link'><a href="" title="SimpleCov::Oj::ResultWrapper (class)">ResultWrapper</a></span></tt> 
+    #<strong>initialize</strong>(result)  &#x21d2; <tt><span class='object_link'><a href="" title="SimpleCov::Sublime::ResultToHash (class)">ResultToHash</a></span></tt> 
   
 
   
@@ -205,7 +204,7 @@ source lines and featuring helpers to interpret that data.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Wrap the SimpleCov::Result to enable hash conversion without monkey patching</p>
+    <p>Initialize a new ResultToHash</p>
 
 
   </div>
@@ -224,7 +223,7 @@ source lines and featuring helpers to interpret that data.</p>
       
       
         &mdash;
-        <div class='inline'><p>the simplecov result to generate hash for</p>
+        <div class='inline'><p>the final result from simplecov</p>
 </div>
       
     </li>
@@ -238,15 +237,25 @@ source lines and featuring helpers to interpret that data.</p>
       <pre class="lines">
 
 
+16
 17
 18
-19</pre>
+19
+20
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/simple_cov/oj/result_wrapper.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/simple_cov/sublime/result_to_hash.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
   <span class='ivar'>@result</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span>
+  <span class='ivar'>@data</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+    <span class='label'>timestamp:</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_created_at'>created_at</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span>
+    <span class='label'>command_name:</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_command_name'>command_name</span><span class='comma'>,</span>
+    <span class='label'>files:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -271,7 +280,7 @@ source lines and featuring helpers to interpret that data.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a nicely formatted hash from the simplecov result data</p>
+    <p>Create a hash from the result that can be used for JSON dumping</p>
 
 
   </div>
@@ -298,25 +307,19 @@ source lines and featuring helpers to interpret that data.</p>
       <pre class="lines">
 
 
-27
-28
-29
-30
 31
 32
 33
-34</pre>
+34
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/simple_cov/oj/result_wrapper.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/simple_cov/sublime/result_to_hash.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
-  <span class='lbrace'>{</span>
-    <span class='label'>covered_percent:</span> <span class='id identifier rubyid_covered_percent'>covered_percent</span><span class='comma'>,</span>
-    <span class='label'>covered_strength:</span> <span class='id identifier rubyid_covered_strength'>covered_strength</span><span class='comma'>,</span>
-    <span class='label'>covered_lines:</span> <span class='id identifier rubyid_covered_lines'>covered_lines</span><span class='comma'>,</span>
-    <span class='label'>total_lines:</span> <span class='id identifier rubyid_total_lines'>total_lines</span>
-  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_extract_files'>extract_files</span>
+  <span class='id identifier rubyid_extract_metrics'>extract_metrics</span>
+  <span class='id identifier rubyid_data'>data</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -328,9 +331,9 @@ source lines and featuring helpers to interpret that data.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Jan 17 12:36:32 2021 by
+  Generated on Fri Mar 19 16:47:04 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  0.9.26 (ruby-3.0.0).
 </div>
 
     </div>

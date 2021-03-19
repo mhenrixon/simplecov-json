@@ -57,30 +57,32 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1 id="simplecov-oj">simplecov-oj</h1>
+      <div id="content"><div id='filecontents'><h1 id="simplecov-sublime">simplecov-sublime</h1>
+
+<p><a href="https://codeclimate.com/github/mhenrixon/simplecov-sublime/maintainability"><img src="https://api.codeclimate.com/v1/badges/4da5beeb8233b5739e07/maintainability" alt="Maintainability"></a> <a href="https://codeclimate.com/github/mhenrixon/simplecov-sublime/test_coverage"><img src="https://api.codeclimate.com/v1/badges/4da5beeb8233b5739e07/test_coverage" alt="Test Coverage"></a></p>
 
 <p>JSON formatter for the ruby 2.5+ code coverage gem SimpleCov</p>
 
 <h2 id="usage">Usage</h2>
 
 <ol>
-<li>Add simplecov-oj to your <code>Gemfile</code> and <code>bundle install</code>:</li>
+<li>Add simplecov-sublime to your <code>Gemfile</code> and <code>bundle install</code>:</li>
 </ol>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>simplecov-oj</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>require:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>group:</span> <span class='symbol'>:test</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>simplecov-sublime</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>require:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>group:</span> <span class='symbol'>:test</span>
 </code></pre>
 
 <ol>
-<li>Require simplecov-oj and set it up as SimpleCov&#39;s formatter:</li>
+<li>Require simplecov-sublime and set it up as SimpleCov&#39;s formatter:</li>
 </ol>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>simplecov-oj</span><span class='tstring_end'>&#39;</span></span>
-<span class='const'><span class='object_link'><a href="SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span><span class='period'>.</span><span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SimpleCov/Formatter.html" title="SimpleCov::Formatter (module)">Formatter</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SimpleCov/Formatter/OjFormatter.html" title="SimpleCov::Formatter::OjFormatter (class)">OjFormatter</a></span></span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>simplecov-sublime</span><span class='tstring_end'>&#39;</span></span>
+<span class='const'><span class='object_link'><a href="SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span><span class='period'>.</span><span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="SimpleCov.html" title="SimpleCov (module)">SimpleCov</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SimpleCov/Formatter.html" title="SimpleCov::Formatter (module)">Formatter</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="SimpleCov/Formatter/SublimeFormatter.html" title="SimpleCov::Formatter::SublimeFormatter (class)">SublimeFormatter</a></span></span>
 </code></pre>
 
 <h2 id="result">Result</h2>
 
-<p>Generated JSON can be found in coverage/coverage.json</p>
+<p>Generated JSON can be found in coverage/sublime.json</p>
 
 <p>The format you can expect is:</p>
 
@@ -130,9 +132,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Sun Jan 17 12:36:32 2021 by
+  Generated on Fri Mar 19 16:47:04 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  0.9.26 (ruby-3.0.0).
 </div>
 
     </div>
